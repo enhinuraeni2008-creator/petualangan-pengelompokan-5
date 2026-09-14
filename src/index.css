@@ -1,0 +1,50 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html, body, #root {
+  height: 100%;
+}
+
+body {
+  @apply font-body text-ink;
+  background: linear-gradient(180deg, #CDEFFF 0%, #E8F8FF 45%, #FBF9F3 100%);
+  overscroll-behavior: none;
+}
+
+* {
+  -webkit-tap-highlight-color: transparent;
+}
+
+::selection {
+  background: #FFC93C;
+  color: #2B3A55;
+}
+
+.btn-pop {
+  @apply active:translate-y-1 active:shadow-none transition-all duration-100 select-none;
+}
+
+.scrollbar-fun::-webkit-scrollbar {
+  width: 10px;
+}
+.scrollbar-fun::-webkit-scrollbar-thumb {
+  background: #8FD9FF;
+  border-radius: 999px;
+}
+.scrollbar-fun::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+:focus-visible {
+  outline: 3px solid #3FA9E0;
+  outline-offset: 3px;
+}
